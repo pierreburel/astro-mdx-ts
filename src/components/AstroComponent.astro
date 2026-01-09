@@ -1,0 +1,14 @@
+---
+type Props = {
+  title?: string;
+  variant?: "a" | "b";
+};
+
+const { title, variant = "a" } = Astro.props;
+---
+
+<div data-variant={variant}>
+  {title && <h2>{title}</h2>}
+
+  <slot />
+</div>
